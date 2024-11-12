@@ -1,4 +1,4 @@
-# image: node:23-alpine
+image: alpine:3.20.3
 
 workflow:
   rules:
@@ -21,6 +21,7 @@ run_unit_tests:
     - echo "Cleaning up temporary files... "
 
 run_lint_tests:
+  image: node:23-alpine3.19
   stage: test
   before_script:
     - echo "Preparing test data..."
