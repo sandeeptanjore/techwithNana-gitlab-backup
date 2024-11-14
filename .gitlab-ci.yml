@@ -32,10 +32,8 @@ build_image:
   stage: build
   tags:
     - ec2
-    - shell
+    - docker
     - remote
-  before_script:
-    - sudo usermod -aG docker gitlab-runner
   script:
     - docker build -t registry.gitlab.com/twn-gitlabcicd-course/mynodeapp-cicd-project:1.0 .
 
