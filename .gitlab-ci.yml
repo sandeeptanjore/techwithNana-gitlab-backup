@@ -31,11 +31,9 @@ run_unit_tests:
 build_image:
   stage: build
   tags:
-    - ec2
-    - shell
-    - remote
+    - ec2-runner
   script:
-    - sudo docker build -t registry.gitlab.com/twn-gitlabcicd-course/mynodeapp-cicd-project:1.0 .
+    - docker build -t registry.gitlab.com/twn-gitlabcicd-course/mynodeapp-cicd-project:1.0 .
 
 
 push_image:
