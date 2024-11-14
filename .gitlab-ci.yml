@@ -51,4 +51,3 @@ push_image:
   script:
     - docker push registry.gitlab.com/twn-gitlabcicd-course/mynodeapp-cicd-project:1.0
 
-
