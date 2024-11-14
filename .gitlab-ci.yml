@@ -32,7 +32,7 @@ build_image:
   stage: build
   tags:
     - ec2
-    - docker
+    - shell
     - remote
   script:
     - docker build -t registry.gitlab.com/twn-gitlabcicd-course/mynodeapp-cicd-project:1.0 .
