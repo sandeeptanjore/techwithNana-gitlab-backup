@@ -35,7 +35,7 @@ build_image:
     - shell
     - remote
   before_script:
-    - usermod -aG docker gitlab-runner
+    - sudo usermod -aG docker gitlab-runner
   script:
     - docker build -t registry.gitlab.com/twn-gitlabcicd-course/mynodeapp-cicd-project:1.0 .
 
