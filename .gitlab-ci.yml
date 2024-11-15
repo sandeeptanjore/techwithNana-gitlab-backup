@@ -74,8 +74,8 @@ deploy_to_dev:
       export DC_IMAGE_NAME=$IMAGE_NAME &&
       export DC_IMAGE_TAG=$IMAGE_TAG &&
 
-      docker-compose -f down &&
-      docker-compose -f up -d"
+      docker-compose down &&
+      docker-compose up -d"
   environment:
     name: development
     url: $DEV_ENDPOINT
