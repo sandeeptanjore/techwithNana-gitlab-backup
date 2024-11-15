@@ -6,7 +6,7 @@ workflow:
 
 variables:
   IMAGE_NAME: $CI_REGISTRY_IMAGE
-  IMAGE_TAG: "1.1"
+  IMAGE_TAG: "1.2"
   DEV_SERVER_HOST: 3.127.248.212
   DEV_ENDPOINT: http://ec2-3-127-248-212.eu-central-1.compute.amazonaws.com:3000
 
