@@ -37,23 +37,6 @@ run_unit_tests:
     reports:
       junit: app/junit.xml
 
-run_lint_checks:
-  image: node:23-alpine3.19
-  stage: test
-  cache:
-    key: "$CI_COMMIT_REF_SLUG"
-    paths:
-      - app/node_modules
-    policy: pull
-  tags:
-    - ec2
-    - docker
-    - remote
-  before_script:
-    - cd app
-    - npm install
-  script:
-    - echo "Running lint checks"
 
 build_image:
   stage: build
