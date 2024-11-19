@@ -73,6 +73,9 @@ push_image:
   script:
     - docker push $IMAGE_NAME:$VERSION
 
+include:
+  - template: Jobs/SAST.gitlab-ci.yml
+
 deploy_to_dev:
   stage: deploy_dev
   tags: 
@@ -97,24 +100,12 @@ deploy_to_dev:
     name: development
     url: $DEV_ENDPOINT
 
-
-include:
-  - template: Jobs/SAST.gitlab-ci.yml
-
-
-
-
-include:
-  - template: Jobs/SAST.gitlab-ci.yml
-
-
-
 run_functional_tests:
   stage: deploy_dev
   needs:
     - deploy_to_dev
   script:
-    - echo "running funcitonal tests"
+    - wrong-command "running funcitonal tests"
 
 deploy_to_staging:
   stage: deploy_staging
