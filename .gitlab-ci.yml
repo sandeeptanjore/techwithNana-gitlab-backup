@@ -85,7 +85,7 @@ include:
     - remote
     - shell
   before_script:
-    - echo $SSH_KEY | sed -e "s/-----BEGIN RSA PRIVATE KEY-----/&\n/" -e "s/-----END RSA PRIVATE KEY-----/&\n/" -e "s/\S\{64\}/&\n/g"\  > deploy-key.pem
+    - echo $SSH_KEY | sed -e "s/-----BEGIN RSA PRIVATE KEY-----/&\n/" -e "s/-----END RSA PRIVATE KEY-----/&\n/" -e "s/\S\{64\}/&\n/g"  > deploy-key.pem
     - chmod 400 deploy-key.pem
   variables:
     SSH_KEY: ""
