@@ -86,7 +86,7 @@ include:
     - shell
   before_script:
     - echo $SSH_PRIVATE_KEY
-    - chmod 400 deploy-key.pem
+    - chmod 400 $SSH_PRIVATE_KEY
   variables:
     SSH_KEY: ""
     SERVER_HOST: ""
