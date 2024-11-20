@@ -62,7 +62,6 @@ build_image:
     reports:
       dotenv: build.env
 
-
 push_image:
   stage: build
   needs:
@@ -119,7 +118,6 @@ deploy_to_dev:
     APP_PORT: 3000
     ENDPOINT: $DEV_ENDPOINT
 
-
 run_functional_tests:
   stage: deploy_dev
   needs:
@@ -143,6 +141,7 @@ run_performance_tests:
     - deploy_to_staging
   script:
     - echo "running performance tests"
+
 
 deploy_to_prod:
   extends: .deploy
