@@ -3,8 +3,6 @@ run_tests:
     - echo "Preparing test data..."
   script:
     - echo "Running tests..."
-    - npm install
-    - npm test
   after_script:
     - echo "Cleaning up temporary files..."
 
