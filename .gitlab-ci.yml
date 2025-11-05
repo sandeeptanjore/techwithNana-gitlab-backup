@@ -6,11 +6,9 @@ push_parcha:
 build_image:
   script:
     - echo "Build started at $(date)"
-    - sleep 10
     - echo "Build ended at $(date)"
 
 push_picture:
   script:
     - echo "Push started at $(date)" 
-    - sleep 10
     - echo "Push ended at $(date)"
