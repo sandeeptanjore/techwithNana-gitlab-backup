@@ -1,14 +1,20 @@
-push_parcha:
+run_tests:
+  stage: test
   script:
     - echo "Tests started at $(date)"
+    - sleep 10
     - echo "Tests ended at $(date)"
 
 build_image:
+  stage: build  
   script:
     - echo "Build started at $(date)"
+    - sleep 10
     - echo "Build ended at $(date)"
 
-push_picture:
+push_image:
+  stage: deploy
   script:
     - echo "Push started at $(date)" 
+    - sleep 10
     - echo "Push ended at $(date)"
