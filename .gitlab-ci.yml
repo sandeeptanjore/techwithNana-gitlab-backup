@@ -1,5 +1,10 @@
+stages:
+  - build
+  - test
+  - deploy
+
 build_image:
+  stage: build
   script:
     - echo "Building the docker image..."
     - echo "Tagging the docker image..."
-
