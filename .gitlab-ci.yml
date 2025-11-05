@@ -1,7 +1,6 @@
-push_tests:
+push_parcha:
   script:
     - echo "Tests started at $(date)"
-    - sleep 10
     - echo "Tests ended at $(date)"
 
 build_image:
@@ -10,7 +9,7 @@ build_image:
     - sleep 10
     - echo "Build ended at $(date)"
 
-push_image:
+push_picture:
   script:
     - echo "Push started at $(date)" 
     - sleep 10
