@@ -30,6 +30,8 @@ run_unit_tests:
     - echo "Running unit tests..."
   after_script:
     - echo "Cleaning up temporary files..."
+    - rm -r test-data
+    - ls -ltr
 
 run_lint_tests:
   stage: test
