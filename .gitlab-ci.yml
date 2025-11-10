@@ -34,7 +34,6 @@ run_lint_tests:
     - echo "Preparing test data..."
   script:
     - echo "Running lint tests..."
-    - wrong-command "this should fail the job"
   after_script:
     - echo "Cleaning up temporary files..."
 
