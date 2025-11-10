@@ -35,7 +35,7 @@ run_lint_tests:
   script:
     - echo "Running lint tests..."
   after_script:
-    - wrong_command "Cleaning up temporary files..."
+    - wrong-command "Cleaning up temporary files..."
 
 deploy_image:
     stage: deploy
