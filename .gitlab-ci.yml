@@ -6,11 +6,13 @@ stages:
 build_image:
   stage: build
   script:
-    - echo "Building the docker image..."
+    - echo wrpng "Building the docker image..."
     - echo "Tagging the docker image..."
 
 push_image:
   stage: build
+  needs:
+    - build_image
   script:
     - echo "Logging into docker registry...."
     - echo "Pushing docker image to registry..."
