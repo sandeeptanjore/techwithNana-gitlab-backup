@@ -23,9 +23,9 @@ run_unit_tests:
     - echo "Preparing test data..."
     - pwd
     - ls -ltr
-    - ls
     - mkdir test-data
-    - ls
+    - echo "After creating a new directory, contents are...."
+    - ls -ltr
   script:
     - echo "Running unit tests..."
   after_script:
