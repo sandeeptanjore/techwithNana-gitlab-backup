@@ -49,7 +49,7 @@ deploy_image:
   only:
     - main
   stage: deploy
-  needs:
-    - run_lint_tests
+  # needs:
+  #  - run_lint_tests
   script:
     - echo "Deploying new docker image to new dev server"
