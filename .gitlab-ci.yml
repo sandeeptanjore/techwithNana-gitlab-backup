@@ -33,7 +33,7 @@ run_unit_tests:
     - chmod +x prepare-tests.sh
     - ./prepare-tests.sh
   script:
-    - echo "Running unit tests..."
+    - echo "Running unit tests for microservice $MICRO_SERVICE_NAME..."
   after_script:
     - echo "Cleaning up temporary files..."
     - rm -r test-data
@@ -57,4 +57,4 @@ deploy_image:
   # needs:
   #  - run_lint_tests
   script:
-    - echo "Deploying new docker image to new dev server"
+    - echo "Deploying new docker image to $DEPLOYMENT_ENVIRONMENT... "
