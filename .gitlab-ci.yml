@@ -58,3 +58,5 @@ deploy_image:
   #  - run_lint_tests
   script:
     - echo "Deploying new docker image to $DEPLOYMENT_ENVIRONMENT... "
+    - echo "Also deploying the docker image to $DEPLOYMENT_ENVIRONMENT using the following configuration file - $PROPERTIES_FILE..."
+    - cat $PROPERTIES_FILE
