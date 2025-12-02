@@ -48,6 +48,7 @@ run_lint_tests:
     - echo "Preparing test data..."
   script:
     - echo "Running lint tests..."
+    - npm version
   after_script:
     - echo "Cleaning up temporary files..."
 
