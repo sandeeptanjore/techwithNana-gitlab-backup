@@ -10,6 +10,10 @@ stages:
   - deploy
 
 build_image:
+  tags:
+    - ec2
+    - aws
+    - remote
   only:
     - main
   stage: build
@@ -18,6 +22,11 @@ build_image:
     - echo "Tagging the docker image..."
 
 push_image:
+  tags:
+    - ec2
+    - aws
+    - remote
+
   only:
     - main
   stage: build
@@ -28,6 +37,10 @@ push_image:
     - echo "Pushing docker image to registry..."
 
 run_unit_tests:
+  tags:
+    - ec2
+    - aws
+    - remote
   stage: test
   before_script:
     - echo "Preparing test data..."
@@ -41,6 +54,10 @@ run_unit_tests:
     - ls -ltr
 
 run_lint_tests:
+  tags:
+    - ec2
+    - aws
+    - remote
   stage: test
   needs:
     - run_unit_tests
@@ -53,6 +70,10 @@ run_lint_tests:
     - echo "Cleaning up temporary files..."
 
 deploy_image:
+  tags:
+    - ec2
+    - aws
+    - remote
   only:
     - main
   stage: deploy
