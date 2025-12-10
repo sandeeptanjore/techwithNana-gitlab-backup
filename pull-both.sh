@@ -9,6 +9,4 @@ echo "📋 Recent commits:"
 git log --oneline -5
 
 echo "✅ Sync complete!"
-EOF
-
 chmod +x pull-both.sh
