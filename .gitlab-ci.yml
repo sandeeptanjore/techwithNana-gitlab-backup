@@ -11,9 +11,6 @@ stages:
 
 build_image:
   tags:
-    - ec2
-    - aws
-    - remote
     - windows
     - arm
   only:
@@ -25,9 +22,6 @@ build_image:
 
 push_image:
   tags:
-    - ec2
-    - aws
-    - remote
     - windows
     - arm
 
@@ -75,9 +69,6 @@ run_lint_tests:
 
 deploy_image:
   tags:
-    - ec2
-    - aws
-    - remote
     - windows
     - arm
   only:
