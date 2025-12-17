@@ -37,7 +37,7 @@ push_image:
 run_unit_tests:
   tags:
     - ec2
-    - aws
+    - shell
     - remote
   stage: test
   before_script:
@@ -52,9 +52,10 @@ run_unit_tests:
     - ls -ltr
 
 run_lint_tests:
+  image: node:25-alpine3.21
   tags:
     - ec2
-    - aws
+    - docker
     - remote
   stage: test
   needs:
