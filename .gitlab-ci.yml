@@ -10,8 +10,11 @@ stages:
 
 build_image:
   tags:
-    - windows
-    - arm
+#    - windows
+#    - arm
+    - ec2
+    - shell
+    - remote
   stage: build
   script:
     - echo "Building the docker image..."
@@ -19,8 +22,11 @@ build_image:
 
 push_image:
   tags:
-    - windows
-    - arm
+#    - windows
+#    - arm
+    - ec2
+    - shell
+    - remote
   stage: build
   needs:
     - build_image
