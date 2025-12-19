@@ -70,8 +70,11 @@ run_lint_tests:
 
 deploy_image:
   tags:
+#    - ec2
+#    - aws
+#    - remote
     - ec2
-    - aws
+    - docker
     - remote
   stage: deploy
   script:
