@@ -21,3 +21,11 @@ run_unit_tests:
       - app/junit.xml
     reports:
       junit: app/junit.xml
+
+build_image:
+  tags:
+   - ec2
+   - shell
+   - remote
+  script:
+  
