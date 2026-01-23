@@ -58,13 +58,14 @@ push_image:
   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
   script:
   - docker push $CI_REGISTRY_IMAGE:1.0
-  deploy_to_dev:
-    stage: deploy
-    tags:
-    - ec2
-    - shell
-    - remote
-    before_script:
-    - chmod 400 $SSH_PRIVATE_KEY
-    script:
-    - ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY ubuntu@$DEV_SERVER_HOST " docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY && docker run -d -p 3000:3000 $CI_REGISTRY_IMAGE:1.0"
+
+deploy_to_dev:
+  stage: deploy
+  tags:
+  - ec2
+  - shell
+  - remote
+  before_script:
+  - chmod 400 $SSH_PRIVATE_KEY
+  script:
+  - ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY ubuntu@$DEV_SERVER_HOST " docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY && docker run -d -p 3000:3000 $CI_REGISTRY_IMAGE:1.0"
